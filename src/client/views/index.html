@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Natural Langauge Processing</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>News Article Evaluator</h1>
+
+            <div class="title">
+                <h2>Paste your URL below:</h2>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form id="main-form" onsubmit="return handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" placeholder="Enter your URL">
+                    <input id="submitBtn" type="submit" name="enterUrl" value="submit"
+                        onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+                <section>
+
+                    <section>
+                        <strong>Form Results:</strong>
+                        <div id="results"></div>
+                    </section>
+        </main>
+
+        <footer>
+            <p>&copy;2020 News Article Evaluator</p>
+        </footer>
+
+
+
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
