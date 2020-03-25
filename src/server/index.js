@@ -11,8 +11,6 @@ const mockAPIResponse = require("./mockAPI.js");
 const aylien = require("aylien_textapi");
 
 const app = express();
-// const distPath = path.join(__dirname, "../..//dist");
-// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(
